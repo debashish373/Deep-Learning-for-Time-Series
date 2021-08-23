@@ -2,4 +2,4 @@ TA-Lib
 tqdm==4.62.1
 yfinance==0.1.63
 minisom
-argparser
+argparse
