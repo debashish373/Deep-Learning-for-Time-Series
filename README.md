@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 cd src
 
-run main.py --ticker TTE.PA --timestep 10 --forward 5 --epochs 10 --fs SOM
+python main.py --ticker TTE.PA --timestep 10 --forward 5 --epochs 10 --fs SOM
 
 
 
