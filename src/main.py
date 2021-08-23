@@ -8,6 +8,8 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 
+import argparse
+
 def run(ticker,timestep=10,forward=5,epochs=5,fs='SOM'):
     
     features=feature_selection.select_features(stocks[ticker],method=fs)
@@ -28,7 +30,23 @@ def run(ticker,timestep=10,forward=5,epochs=5,fs='SOM'):
     
 # 5 tickers to choose from ['BATS.L','DTE.DE','RNO.PA','SIE.DE','TTE.PA']
 if __name__=="__main__":
-    run('DTE.DE')
+    
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--ticker",type=str)
+    parser.add_argument("--timestep",type=int)
+    parser.add_argument("--forward",type=int)
+    parser.add_argument("--epochs",type=int)
+    parser.add_argument("--fs",type=str)
+    
+    args=parser.parse_args()
+    
+    run(
+        ticker=args.ticker,
+        timestep=args.timestep,
+        forward=args.forward,
+        epochs=args.epochs,
+        fs=args.fs,
+        )
     
     
 
