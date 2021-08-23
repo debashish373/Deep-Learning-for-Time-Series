@@ -1,5 +1,5 @@
 
-# Deep Learning for Time Series Prediction
+# LSTMs for Time Series Prediction
 
 
 This project employs Long Short Term Memory Networks (LSTMs) to predict the direction of price movements for five European stocks from five different industries for varying window sizes, where a classification approach for 5D forward return predictions is used. Three different LSTM architectures have been used and compared for accuracies. A comparison of LSTMs with tree based models has also been carried out, and further possibilities of viewing the project as a regression problem were checked.
